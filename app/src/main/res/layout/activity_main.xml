@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.morening.project.MainActivity">
+
+    <com.morening.project.view.CycleClockWithTime
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_margin="30dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <com.morening.project.view.CycleClockWithTime
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:padding="30dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <com.morening.project.view.CycleClockWithTime
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        app:time_text_size="16dp"
+        app:time_text_color="#FF512DA8"
+        app:hour_reach_color="#FF303F9F"
+        app:hour_unreach_color="#7F303F9F"
+        app:hour_paint_width="6dp"
+        app:minute_reach_color="#FF00796B"
+        app:minute_unreach_color="#7F00796B"
+        app:minute_paint_width="6dp"
+        app:second_reach_color="#FFE64A19"
+        app:second_unreach_color="#7FE64A19"
+        app:second_paint_width="6dp"
+        app:clock_radius="128dp"
+        app:cycle_offset="10dp"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>

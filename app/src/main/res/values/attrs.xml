@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="hour_reach_color" format="color"/>
+    <attr name="minute_reach_color" format="color"/>
+    <attr name="second_reach_color" format="color"/>
+
+    <attr name="hour_unreach_color" format="color"/>
+    <attr name="minute_unreach_color" format="color"/>
+    <attr name="second_unreach_color" format="color"/>
+
+    <attr name="hour_paint_width" format="dimension"/>
+    <attr name="minute_paint_width" format="dimension"/>
+    <attr name="second_paint_width" format="dimension"/>
+
+    <attr name="time_text_size" format="dimension"/>
+    <attr name="time_text_color" format="color"/>
+
+    <attr name="cycle_offset" format="dimension"/>
+    <attr name="clock_radius" format="dimension"/>
+
+    <declare-styleable name="CycleClockWithTime">
+        <attr name="hour_reach_color"/>
+        <attr name="minute_reach_color"/>
+        <attr name="second_reach_color"/>
+
+        <attr name="hour_unreach_color"/>
+        <attr name="minute_unreach_color"/>
+        <attr name="second_unreach_color"/>
+
+        <attr name="hour_paint_width"/>
+        <attr name="minute_paint_width"/>
+        <attr name="second_paint_width"/>
+
+        <attr name="time_text_size"/>
+        <attr name="time_text_color"/>
+
+        <attr name="cycle_offset"/>
+        <attr name="clock_radius"/>
+    </declare-styleable>
+</resources>
