@@ -22,6 +22,8 @@ public class CycleClockWithTime extends View {
 
     private final static String TAG = "CycleClockWithTime";
 
+    private final static int MESSAGE_UPDATE_UI = 0x01;
+
     private final int DEFAULT_HOUR_REACH_COLOR = 0xFF388E3C;
     private final int DEFAULT_MINUTE_REACH_COLOR = 0xFF8BC34A;
     private final int DEFAULT_SECOND_REACH_COLOR = 0xFFCDDC39;
@@ -80,10 +82,10 @@ public class CycleClockWithTime extends View {
 
                 invalidate();
 
-                sendEmptyMessageDelayed(0x01, 1000);
+                sendEmptyMessageDelayed(MESSAGE_UPDATE_UI, 1000);
             }
         };
-        handler.sendEmptyMessageDelayed(0x01, 0);
+        handler.sendEmptyMessageDelayed(MESSAGE_UPDATE_UI, 0);
     }
 
     private void obtainStyledAttrs(AttributeSet attrs) {
@@ -109,6 +111,58 @@ public class CycleClockWithTime extends View {
 //        Log.d(TAG, "[obtainStyledAttrs] mClockRadius: "+mClockRadius);
 
         ta.recycle();
+    }
+
+    public void setHourReachColor(int color) {
+        this.mHourReachColor = color;
+    }
+
+    public void setMinuteReachColor(int color) {
+        this.mMinReachColor = color;
+    }
+
+    public void setSecondReachColor(int color) {
+        this.mSecReachColor = color;
+    }
+
+    public void setHourUnreachColor(int color) {
+        this.mHourUnreachColor = color;
+    }
+
+    public void setMinuteUnreachColor(int color) {
+        this.mMinUnreachColor = color;
+    }
+
+    public void setSecondUnreachColor(int color) {
+        this.mSecUnreachColor = color;
+    }
+
+    public void setHourPaintWidth(int width) {
+        this.mHourPaintWidth = width;
+    }
+
+    public void setMinutePaintWidth(int width) {
+        this.mMinPaintWidth = width;
+    }
+
+    public void setSecondPaintWidth(int width) {
+        this.mSecPaintWidth = width;
+    }
+
+    public void setTimeTextSize(int size) {
+        this.mTimeTextSize = size;
+    }
+
+    public void setTimeTextColor(int color) {
+        this.mTimeTextColor = color;
+    }
+
+    public void setCycleOffset(int offset) {
+        this.mCycleOffset = offset;
+    }
+
+    public void setClockRadius(int radius) {
+        this.mClockRadius = radius;
     }
 
     @Override
